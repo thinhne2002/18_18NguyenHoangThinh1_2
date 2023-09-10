@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        console.log("Câu 1,2: ");
+        bmi = function (mass, height) {
+          return mass / height ** 2;
+        };
+        let Mark = {
+          mass: 78,
+          height: 1.69,
+          bmi: bmi(78, 1.69),
+        };
+        let Jonh = {
+          mass: 92,
+          height: 1.95,
+          bmi: bmi(92, 1.95),
+        };
+        let Mark1 = {
+          mass: 78,
+          height: 1.69,
+          bmi: bmi(95, 1.88),
+        };
+        let Jonh1 = {
+          mass: 92,
+          height: 1.95,
+          bmi: bmi(85, 1.76),
+        };
+        let markHigherBMI;
+        console.log("nếu Mark > Jonh biến markHigherBMI trả về True");
+        if (Mark.bmi > Jonh.bmi) {
+          markHigherBMI = true;
+          console.log(`BMI của Mark(${Mark.bmi}) > Jonh(${Jonh.bmi})`);
+          console.log(markHigherBMI);
+        } else {
+          markHigherBMI = false;
+          console.log(`BMI của Mark(${Mark.bmi}) < Jonh(${Jonh.bmi})`);
+          console.log(markHigherBMI);
+        }
+        if (Mark1.bmi > Jonh1.bmi) {
+          markHigherBMI = true;
+          console.log(`BMI của Mark1(${Mark1.bmi}) > Jonh1(${Jonh1.bmi})`);
+          console.log(markHigherBMI);
+        } else {
+          markHigherBMI = false;
+          console.log(`BMI của Mark1(${Mark1.bmi}) < Jonh1(${Jonh1.bmi})`);
+          console.log(markHigherBMI);
+        }
+        console.log("____________________________________________________________________");
+        console.log("Câu 3,4: ");
+        let Dolphins = [96,108,89];
+        let Koalas = [88,91,110];
+        let Dolphins1 = [97,112,101];
+        let Koalas1 = [109,95,123];
+        let Dolphins2 = [97,112,101];
+        let Koalas2 = [109,95,106];
+        Array.prototype.avg = function(){
+            let sum = 0;
+            for (let index = 0; index < this.length; index++) {
+                sum = sum + this[index];
+            }
+            return sum/this.length;
+        }
+        let DolphinsScore = Dolphins.avg();
+        let KoalasScore = Koalas.avg();
+        let DolphinsScore1 = Dolphins1.avg();
+        let KoalasScore1 = Koalas1.avg();
+        let DolphinsScore2 = Dolphins2.avg();
+        let KoalasScore2 = Koalas2.avg();
+
+        function check(a,b){
+          if(a>b && a>100){
+            console.log(`đội Dophins(${a}) thắng đội Koalas(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas(${b}) thắng đội Dophins(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins(${a}) có điểm cao hơn đội Koalas(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else if(a == b && a > 100 && b > 100){
+            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b})`);
+          }else if(a == b && a < 100 && b < 100){
+            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
+          }else{
+            console.log(`đội Koalas(${b}) có điểm cao hơn đội Dophins(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+        function check1(a,b){
+          if(a>b && a>100){
+            console.log(`đội Dophins1(${a}) thắng đội Koalas1(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas1(${b}) thắng đội Dophins1(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins1(${a}) có điểm cao hơn đội Koalas1(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else if(a == b && a > 100 && b > 100){
+            console.log(`đội Dophins1(${a}) hòa với độ đội Koalas1(${b})`);
+          }else if(a == b && a < 100 && b < 100){
+            console.log(`đội Dophins1(${a}) hòa với độ đội Koalas1(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
+          }else{
+            console.log(`đội Koalas1(${b}) có điểm cao hơn đội Dophins1(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+        function check2(a,b){
+          if(a>b && a>100){
+            console.log(`đội Dophins2(${a}) thắng đội Koalas2(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas2(${b}) thắng đội Dophins2(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins2(${a}) có điểm cao hơn đội Koalas2(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else if(a == b && a > 100 && b > 100){
+            console.log(`đội Dophins2(${a}) hòa với độ đội Koalas2(${b})`);
+          }else if(a == b && a < 100 && b < 100){
+            console.log(`đội Dophins2(${a}) hòa với độ đội Koalas2(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
+          }else{
+            console.log(`đội Koalas2(${b}) có điểm cao hơn đội Dophins2(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+
+
+        let newarr = [];
+        newarr.push(DolphinsScore,KoalasScore,DolphinsScore1,KoalasScore1,DolphinsScore2,KoalasScore2);
+        console.log(newarr);
+        console.log('số Điểm Trung bình của đội Dolphins là: ' + DolphinsScore);
+        console.log('số Điểm Trung bình của đội Koalas là: ' + KoalasScore);
+        console.log('số Điểm Trung bình của đội Dolphins là: ' + DolphinsScore1);
+        console.log('số Điểm Trung bình của đội Koalas là: ' + KoalasScore1);
+        console.log('số Điểm Trung bình của đội Dolphins là: ' + DolphinsScore2);
+        console.log('số Điểm Trung bình của đội Koalas là: ' + KoalasScore2);
+        console.log("---------------Bảng Điểm---------------");
+        
+        check(DolphinsScore,KoalasScore);
+        console.log(`--------------------------------------------`);
+        check1(DolphinsScore1,KoalasScore1);
+        console.log(`--------------------------------------------`);
+        check2(DolphinsScore2,KoalasScore2);
+
+        console.log(`____________________________________________________`);
+        console.log(`câu 5:`);
+        let bill = [275,40,430];
+        Array.prototype.total=function(){
+          let total = 0;
+          for (let index = 0; index < this.length; index++) {
+            if(this[index] < 50 && this[index] > 0){
+              total = total + this[index];
+            }else if(this[index] >= 50 && this[index] <= 300){
+              total = total + this[index] + this[index]*0.15; 
+            }else if(this[index] > 300){
+              total = total + this[index] + this[index]*0.2;
+            }
+          }
+          return total;
+        }
+        let total = bill.total();
+        let tip = bill.reduce((total, currentValue)=>{
+          return total + currentValue;
+        });
+        console.log(`Tổng hóa đơn là: ` + total + `\nTrong đó tiền tips là: ` + (total - tip));
+        console.log(`____________________________________________________`);
+        console.log(`câu 6:`);
+        let avgArrow = team => {
+          let sum = team.reduce((total, currentValue)=>total + currentValue);
+          return sum/team.length;
+        }
+        let avgDophins = avgArrow(Dolphins);
+        let avgKoalas = avgArrow(Koalas);
+        console.log("Số điểm của đội Dolphins là: " + avgDophins);
+        console.log("Số điểm của đội Koalas là: " + avgKoalas);
+        let checkWinner = (a,b) => {
+          if(a>b && a>100){
+            console.log(`đội Dophins(${a}) thắng đội Koalas(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas(${b}) thắng đội Dophins(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins(${a}) có điểm cao hơn đội Koalas(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else if(a == b && a > 100 && b > 100){
+            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b})`);
+          }else if(a == b && a < 100 && b < 100){
+            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
+          }else{
+            console.log(`đội Koalas(${b}) có điểm cao hơn đội Dophins(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+        let checkWinner1 = (a,b) => {
+          if(a>b && a>100){
+            console.log(`đội Dophins1(${a}) thắng đội Koalas1(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas1(${b}) thắng đội Dophins1(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins1(${a}) có điểm cao hơn đội Koalas1(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else{
+            console.log(`đội Koalas1(${b}) có điểm cao hơn đội Dophins1(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+        let checkWinner2 = (a,b) => {
+          if(a>b && a>100){
+            console.log(`đội Dophins2(${a}) thắng đội Koalas2(${b})`);
+          }else if(a<b && b>100){
+            console.log(`đội Koalas2(${b}) thắng đội Dophins2(${a})`);
+          }else if(a>b && a < 100){
+            console.log(`đội Dophins2(${a}) có điểm cao hơn đội Koalas2(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else{
+            console.log(`đội Koalas2(${b}) có điểm cao hơn đội Dophins2(${a}) nhưng không đạt 100 điểm nên không tính`);
+          }
+        }
+        checkWinner(avgDophins,avgKoalas);
+        checkWinner(avgDophins1,avgKoalas1);
+        checkWinner(avgDophins2,avgKoalas2);
+    </script>
+  </head>
+  <body>
+    </body>
+</html>
