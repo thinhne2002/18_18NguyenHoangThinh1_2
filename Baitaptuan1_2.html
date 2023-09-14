@@ -50,7 +50,7 @@
           console.log(markHigherBMI);
         }
         console.log("____________________________________________________________________");
-        console.log("Câu 3,4: ");
+        console.log("Câu 3: ");
         let Dolphins = [96,108,89];
         let Koalas = [88,91,110];
         let Dolphins1 = [97,112,101];
@@ -136,7 +136,7 @@
         check2(DolphinsScore2,KoalasScore2);
 
         console.log(`____________________________________________________`);
-        console.log(`câu 5:`);
+        console.log(`câu 4:`);
         let bill = [275,40,430];
         Array.prototype.total=function(){
           let total = 0;
@@ -157,56 +157,160 @@
         });
         console.log(`Tổng hóa đơn là: ` + total + `\nTrong đó tiền tips là: ` + (total - tip));
         console.log(`____________________________________________________`);
-        console.log(`câu 6:`);
+        console.log(`câu 5:`);
         let avgArrow = team => {
           let sum = team.reduce((total, currentValue)=>total + currentValue);
           return sum/team.length;
         }
-        let avgDophins = avgArrow(Dolphins);
-        let avgKoalas = avgArrow(Koalas);
-        console.log("Số điểm của đội Dolphins là: " + avgDophins);
-        console.log("Số điểm của đội Koalas là: " + avgKoalas);
+        let Dolphins5 = [44,23,71];
+        let Koalas5 = [65,54,49];
+        let Dolphins5_1 = [85,54,41];
+        let Koalas5_1 = [23,34,27];
+        let avgDophins5 = avgArrow(Dolphins5);
+        let avgKoalas5 = avgArrow(Koalas5);
+        let avgDophins5_1 = avgArrow(Dolphins5_1);
+        let avgKoalas5_1= avgArrow(Koalas5_1);
         let checkWinner = (a,b) => {
           if(a>b && a>100){
-            console.log(`đội Dophins(${a}) thắng đội Koalas(${b})`);
+            console.log(`đội Dophins5(${a}) thắng đội Koalas5(${b})`);
           }else if(a<b && b>100){
-            console.log(`đội Koalas(${b}) thắng đội Dophins(${a})`);
+            console.log(`đội Koalas5(${b}) thắng đội Dophins5(${a})`);
           }else if(a>b && a < 100){
-            console.log(`đội Dophins(${a}) có điểm cao hơn đội Koalas(${b}) nhưng không đạt 100 điểm nên không tính`);
+            console.log(`đội Dophins5(${a}) có điểm cao hơn đội Koalas5(${b}) nhưng không đạt 100 điểm nên không tính`);
           }else if(a == b && a > 100 && b > 100){
-            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b})`);
+            console.log(`đội Dophins5(${a}) hòa với độ đội Koalas5(${b})`);
           }else if(a == b && a < 100 && b < 100){
-            console.log(`đội Dophins(${a}) hòa với độ đội Koalas(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
+            console.log(`đội Dophins5(${a}) hòa với độ đội Koalas5(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
           }else{
-            console.log(`đội Koalas(${b}) có điểm cao hơn đội Dophins(${a}) nhưng không đạt 100 điểm nên không tính`);
+            console.log(`đội Koalas5(${b}) có điểm cao hơn đội Dophins5(${a}) nhưng không đạt 100 điểm nên không tính`);
           }
         }
         let checkWinner1 = (a,b) => {
           if(a>b && a>100){
-            console.log(`đội Dophins1(${a}) thắng đội Koalas1(${b})`);
+            console.log(`đội Dophins5_1(${a}) thắng đội Koalas5_1(${b})`);
           }else if(a<b && b>100){
-            console.log(`đội Koalas1(${b}) thắng đội Dophins1(${a})`);
+            console.log(`đội Koalas5_1(${b}) thắng đội Dophins5_1(${a})`);
           }else if(a>b && a < 100){
-            console.log(`đội Dophins1(${a}) có điểm cao hơn đội Koalas1(${b}) nhưng không đạt 100 điểm nên không tính`);
+            console.log(`đội Dophins5_1(${a}) có điểm cao hơn đội Koalas5_1(${b}) nhưng không đạt 100 điểm nên không tính`);
+          }else if(a == b && a > 100 && b > 100){
+            console.log(`đội Dophins5_1(${a}) hòa với độ đội Koalas5_1(${b})`);
+          }else if(a == b && a < 100 && b < 100){
+            console.log(`đội Dophins5_1(${a}) hòa với độ đội Koalas5_1(${b} nhưng vì cả 2 có điểm ít hơn 100 nên không ai được giải)`);
           }else{
-            console.log(`đội Koalas1(${b}) có điểm cao hơn đội Dophins1(${a}) nhưng không đạt 100 điểm nên không tính`);
+            console.log(`đội Koalas5_1(${b}) có điểm cao hơn đội Dophins5_1(${a}) nhưng không đạt 100 điểm nên không tính`);
           }
         }
-        let checkWinner2 = (a,b) => {
-          if(a>b && a>100){
-            console.log(`đội Dophins2(${a}) thắng đội Koalas2(${b})`);
-          }else if(a<b && b>100){
-            console.log(`đội Koalas2(${b}) thắng đội Dophins2(${a})`);
-          }else if(a>b && a < 100){
-            console.log(`đội Dophins2(${a}) có điểm cao hơn đội Koalas2(${b}) nhưng không đạt 100 điểm nên không tính`);
-          }else{
-            console.log(`đội Koalas2(${b}) có điểm cao hơn đội Dophins2(${a}) nhưng không đạt 100 điểm nên không tính`);
+        checkWinner(avgDophins5,avgKoalas5);
+        checkWinner(avgDophins5_1,avgKoalas5_1);
+        console.log(`_______________________________________________________`);
+        console.log("Câu 6:");
+        let calctip = (a) => {
+          let tips = 0;
+          if(a < 50 && a > 0){
+              tips = 0;
+            }else if(a >= 50 && a <= 300){
+              tips = a*0.15; 
+            }else if(a > 300){
+              tips = a *0.2;
+            }
+            return tips;
+        }
+        let bills = [125,555,44];
+        let tips = [];
+        let tips1 = [];
+        let total1 = [];
+        let total2 = [];
+        let calctips = (bills,tips) =>{
+          for (let index = 0; index < bills.length; index++) {
+            if(bills[index] >= 50){
+              tips.push(calctip(bills[index]));
+            }else{
+              tips.push(0);
+            }
+          }
+          return tips;
+        }
+        let sum = (a,b,c)=>{
+          let sum = 0;
+          for (let index = 0; index < a.length; index++) {
+            c.push(a[index] + b[index]);
+          }
+          for (let index1 = 0; index1 < c.length; index1++) {
+            sum += c[index1];
+          }
+          c.push(`Tổng bills là: ${sum}`);
+          return c;
+        }
+        console.log(calctip(100));
+        tips1 = calctips(bills,tips);
+        total2 = sum(bills,tips1,total1);
+        console.log('Giá Tiền Mỗi món: ' + bills + '\nTiền tips cho từng món: ' + tips1);
+        console.log('Tổng cả giá gốc và tips của từng món là: ' + total2);
+        console.log(`_______________________________________________________`);
+        console.log("Câu 7:");
+        let Mark_Miller = {
+          mass : 78,
+          height : 1.69,
+          calcBMI: function(){
+            return Mark_Miller.mass/(Mark_Miller.height**2);
           }
         }
-        checkWinner(avgDophins,avgKoalas);
-        checkWinner(avgDophins1,avgKoalas1);
-        checkWinner(avgDophins2,avgKoalas2);
-    </script>
+        let Jonh_Smith = {
+          mass : 92,
+          height : 1.95,
+          calcBMI: function(){
+            return Jonh_Smith.mass/(Jonh_Smith.height**2);
+          }
+        }
+        if(Mark_Miller.calcBMI() > Jonh_Smith.calcBMI()){
+          console.log(`Chỉ số BMI của Mark_Miller(${Mark_Miller.calcBMI()}) > Jonh_Smith(${Jonh_Smith.calcBMI()})`);
+        } else if(Mark_Miller.calcBMI() < Jonh_Smith.calcBMI()){
+          console.log(`BMI của Mark_Miller(${Mark_Miller.calcBMI()}) < Jonh_Smith(${Jonh_Smith.calcBMI()})`);
+        }else{
+          console.log(`BMI của Mark_Miller(${Mark_Miller.calcBMI()}) = Jonh_Smith(${Jonh_Smith.calcBMI()})`);
+        }
+        console.log(`_______________________________________________________`);
+        console.log("Câu 8:");
+        let sum1 = (a,b,c)=>{
+          let sum = 0;
+          for (let index = 0; index < a.length; index++) {
+            c.push(a[index] + b[index]);
+          }
+          for (let index1 = 0; index1 < c.length; index1++) {
+            sum += c[index1];
+          }
+          return c;
+        }
+        let billl = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+        let tipp = [];
+        let tipp1 = [];
+        let totall = [];
+        let totals = [];
+        tipp = calctips(billl,tipp1);
+        totals = sum1(billl,tipp,totall);
+        console.log(`Giá Từng món trong hóa đơn: ` + billl);
+        console.log(`Tips của từng món trong hóa đơn: ` + tipp);
+        console.log(`Chi tiết từng món (đã cộng tiền tips) trong hóa đơn: ` + totals);
+        let calcAverage = bill => {
+          let sum = bill.reduce((total, currentValue)=>total + currentValue);
+          return sum/bill.length;
+        }
+        console.log(`Giá trị trung bình của Hóa Đơn là: ` + calcAverage(totals));
+        console.log(`_______________________________________________________`);
+        console.log("Câu 9:");
+        let Temperatures =  [17, 21, 23];
+        let Temperatures1 = [12, 5, -5, 0, 4];
+        let printInfo = information => {
+          let list = [];
+          for (let index = 0; index < information.length; index++) {
+            list.push(information[index] + "oC in " + (index+1) + " days...");
+          }
+          let done = list.join(",");
+          console.log(`Thông tin chi tiết: ` + done);
+        }
+        printInfo(Temperatures);
+        printInfo(Temperatures1);
+  </script>
   </head>
   <body>
     </body>
